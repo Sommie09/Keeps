@@ -1,5 +1,6 @@
 package com.example.keeps
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.RecyclerView
@@ -15,6 +16,11 @@ class MainActivity : AppCompatActivity() {
 
         add_keeps = findViewById(R.id.add_keeps)
         keeps_rv = findViewById(R.id.keeps_rv)
+
+        add_keeps.setOnClickListener {
+            startActivity(Intent(this, AddKeeps::class.java))
+            finish()
+        }
 
        
     }
